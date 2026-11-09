@@ -1,0 +1,573 @@
+/* ==========================================================================
+   GURU/PAGES.CSS — TABEL, FILTER, & MODAL BANK SOAL KHUSUS ROLE GURU
+   ========================================================================== */
+
+.page-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E8EEF5;
+    border-radius: 16px;
+    padding: 20px 22px;
+    margin-bottom: 18px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.page-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.page-card-header h3 {
+    font-size: 15.5px;
+    font-weight: 800;
+    color: #0F172A;
+}
+
+.page-card-header p {
+    font-size: 12px;
+    color: #64748B;
+    margin-top: 2px;
+}
+
+.btn-group-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.cbt-btn {
+    padding: 8px 14px;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.18s ease;
+}
+
+.cbt-btn:hover { opacity: 0.92; transform: translateY(-1px); }
+.cbt-btn.primary { background-color: #1D5DEC; color: #FFFFFF; }
+.cbt-btn.success { background-color: #ECFDF5; color: #047857; border-color: #A7F3D0; }
+.cbt-btn.warning { background-color: #FEF3C7; color: #B45309; border-color: #FDE68A; }
+.cbt-btn.danger { background-color: #E11D48; color: #FFFFFF; }
+.cbt-btn.outline { background-color: #F8FAFC; color: #334155; border-color: #E2E8F0; }
+.cbt-btn.edit-btn { background-color: #EEF4FF; color: #1D5DEC; border-color: #BFDBFE; }
+
+.table-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #F8FAFC;
+    border: 1px solid #E8EEF5;
+    padding: 12px 14px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.toolbar-left {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex: 1;
+}
+
+.cbt-input-sm {
+    padding: 8px 12px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 12.5px;
+    background-color: #FFFFFF;
+    color: #0F172A;
+    outline: none;
+}
+
+.cbt-input-sm:focus {
+    border-color: #1D5DEC;
+    box-shadow: 0 0 0 3px rgba(29, 93, 236, 0.1);
+}
+
+.search-input-wrap {
+    min-width: 220px;
+    flex: 1;
+    max-width: 300px;
+}
+
+.table-wrap {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.cbt-data-table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    font-size: 12.5px;
+}
+
+.cbt-data-table th {
+    background-color: #F8FAFC;
+    color: #64748B;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 11px 14px;
+    text-align: left;
+    border-bottom: 1px solid #E8EEF5;
+}
+
+.cbt-data-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #F1F5F9;
+    vertical-align: middle;
+}
+
+.action-cell {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.status-pill {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.status-pill.green { background-color: #DCFCE7; color: #15803D; }
+.status-pill.amber { background-color: #FEF3C7; color: #B45309; }
+.status-pill.red { background-color: #FFE4E6; color: #E11D48; }
+.status-pill.blue { background-color: #EEF4FF; color: #1D5DEC; }
+
+/* Modal Form Bank Soal Guru */
+.cbt-modal-header {
+    padding: 18px 22px;
+    border-bottom: 1px solid #F1F5F9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cbt-modal-header h4 {
+    font-size: 15.5px;
+    font-weight: 800;
+    color: #0F172A;
+}
+
+.cbt-modal-close {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 800;
+    color: #64748B;
+}
+
+.cbt-modal-body {
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-field-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 6px;
+}
+
+.form-field-group .cbt-input-sm {
+    width: 100%;
+    padding: 10px 12px;
+}
+
+.password-gen-row {
+    display: flex;
+    gap: 10px;
+}
+
+.cbt-modal-footer {
+    padding: 14px 22px;
+    background-color: #F8FAFC;
+    border-top: 1px solid #F1F5F9;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+@media (max-width: 768px) {
+    .page-card {
+        padding: 16px 14px;
+        border-radius: 14px;
+    }
+
+    .page-card-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .page-card-header .cbt-btn,
+    .btn-group-row .cbt-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .toolbar-left,
+    .password-gen-row {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .search-input-wrap,
+    .toolbar-left .cbt-input-sm {
+        min-width: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* ==========================================================================
+   GOOGLE FORM BUILDER & ACCORDION FORM CARDS — BANK SOAL GURU
+   ========================================================================== */
+
+/* 1. KARTU FORMULIR ACCORDION (DAFTAR PAKET SOAL DI HALAMAN UTAMA) */
+.gform-package-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.gform-package-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-top: 6px solid #4F46E5;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+    transition: box-shadow 0.2s ease;
+}
+
+.gform-package-card:hover {
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.gform-package-header {
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    cursor: pointer;
+    user-select: none;
+    background-color: #FFFFFF;
+}
+
+.gform-package-header:hover {
+    background-color: #F8FAFC;
+}
+
+.gform-package-title h4 {
+    font-size: 16px;
+    font-weight: 800;
+    color: #0F172A;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gform-package-title p {
+    font-size: 12.5px;
+    color: #64748B;
+    margin-top: 4px;
+}
+
+.gform-package-body {
+    display: none;
+    padding: 18px 22px;
+    background-color: #F8FAFC;
+    border-top: 1px solid #E2E8F0;
+}
+
+.gform-package-body.open {
+    display: block;
+}
+
+.question-preview-item {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-left: 4px solid #1D5DEC;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+}
+
+/* 2. WORKSPACE GOOGLE FORM BUILDER */
+.gform-workspace-wrapper {
+    display: none;
+    max-width: 860px;
+    margin: 0 auto;
+    padding-bottom: 90px;
+    position: relative;
+}
+
+.gform-workspace-wrapper.active {
+    display: block;
+}
+
+/* Kartu Judul Atas ala Google Form */
+.gform-header-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-top: 10px solid #4F46E5;
+    border-radius: 12px;
+    padding: 24px 26px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.05);
+}
+
+.gform-header-card h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #0F172A;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.gform-header-card p {
+    font-size: 13px;
+    color: #64748B;
+    margin-top: 10px;
+}
+
+/* Kartu Pertanyaan Google Form */
+.gform-question-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-left: 6px solid #2563EB;
+    border-radius: 12px;
+    padding: 18px 24px 16px 24px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.gform-drag-handle {
+    text-align: center;
+    color: #CBD5E1;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    user-select: none;
+}
+
+.gform-top-row {
+    display: grid;
+    grid-template-columns: 1fr auto 200px;
+    gap: 14px;
+    align-items: start;
+}
+
+.gform-question-input-box {
+    background-color: #F8FAFC;
+    border-bottom: 2px solid #4F46E5;
+    border-radius: 6px 6px 0 0;
+    padding: 12px 14px;
+}
+
+.gform-question-textarea {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #0F172A;
+    resize: vertical;
+    outline: none;
+    min-height: 44px;
+}
+
+.gform-format-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 4px 4px 4px;
+    color: #64748B;
+}
+
+.gform-format-btn {
+    background: none;
+    border: none;
+    font-family: serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #475569;
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.gform-format-btn:hover {
+    background-color: #F1F5F9;
+    color: #0F172A;
+}
+
+.gform-image-upload-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
+    background-color: #FFFFFF;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.18s;
+}
+
+.gform-image-upload-btn:hover {
+    background-color: #EEF4FF;
+    color: #1D5DEC;
+    border-color: #BFDBFE;
+}
+
+.gform-type-pill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    background-color: #FFFFFF;
+}
+
+/* Daftar Opsi Pilihan Ganda A - E di Dalam Kartu */
+.gform-options-container {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gform-option-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.gform-radio-key {
+    width: 20px;
+    height: 20px;
+    accent-color: #10B981;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.gform-option-label {
+    font-size: 13px;
+    font-weight: 800;
+    color: #475569;
+    width: 22px;
+}
+
+.gform-option-input {
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid transparent;
+    padding: 7px 4px;
+    font-family: inherit;
+    font-size: 13.5px;
+    color: #0F172A;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.gform-option-input:hover {
+    border-bottom-color: #CBD5E1;
+}
+
+.gform-option-input:focus {
+    border-bottom: 2px solid #4F46E5;
+}
+
+.gform-option-media-preview {
+    margin-left: 34px;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gform-option-media-preview img {
+    max-height: 75px;
+    border-radius: 6px;
+    border: 1px solid #CBD5E1;
+}
+
+/* Footer Kartu Pertanyaan (Kunci Jawaban, Bobot Otomatis, Duplikat, Hapus) */
+.gform-card-footer {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid #E2E8F0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Floating Side Action Bar (Persis Sebelah Kanan Google Form) */
+.gform-floating-Resultbar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-radius: 14px;
+    padding: 12px 20px;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.18);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    z-index: 500;
+}
+
+@media (max-width: 768px) {
+    .gform-top-row {
+        grid-template-columns: 1fr;
+    }
+
+    .gform-floating-Resultbar {
+        width: 94%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

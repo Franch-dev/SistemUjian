@@ -1,0 +1,357 @@
+/* ==========================================================================
+   ADMIN-PAGES.CSS — TABEL, TOOLBAR SORTING, & CUSTOM POPUP MODAL
+   ========================================================================== */
+
+    .page-card {
+        background-color: #FFFFFF;
+        border: 1px solid #E8EEF5;
+        border-radius: 16px;
+        padding: 20px 22px;
+        margin-bottom: 18px;
+    }
+
+    .page-card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .page-card-header h3 {
+        font-size: 15.5px;
+        font-weight: 800;
+        color: #0F172A;
+    }
+
+    .page-card-header p {
+        font-size: 12px;
+        color: #64748B;
+        margin-top: 2px;
+    }
+
+    .btn-group-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .cbt-btn {
+        padding: 8px 14px;
+        border-radius: 9px;
+        font-family: inherit;
+        font-size: 12px;
+        font-weight: 700;
+        cursor: pointer;
+        border: 1px solid transparent;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.18s ease;
+    }
+
+    .cbt-btn:hover { opacity: 0.92; transform: translateY(-1px); }
+    .cbt-btn.primary { background-color: #1D5DEC; color: #FFFFFF; }
+    .cbt-btn.success { background-color: #ECFDF5; color: #047857; border-color: #A7F3D0; }
+    .cbt-btn.warning { background-color: #FEF3C7; color: #B45309; border-color: #FDE68A; }
+    .cbt-btn.danger { background-color: #E11D48; color: #FFFFFF; }
+.cbt-btn.outline { background-color: #F8FAFC; color: #334155; border-color: #E2E8F0; }
+.cbt-btn.edit-btn { background-color: #EEF4FF; color: #1D5DEC; border-color: #BFDBFE; }
+
+/* BAR SORTING & FILTER DI ATAS TABEL */
+.table-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #F8FAFC;
+    border: 1px solid #E8EEF5;
+    padding: 12px 14px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.toolbar-left {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex: 1;
+}
+
+.cbt-input-sm {
+    padding: 8px 12px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 12.5px;
+    background-color: #FFFFFF;
+    color: #0F172A;
+    outline: none;
+}
+
+.cbt-input-sm:focus {
+    border-color: #1D5DEC;
+    box-shadow: 0 0 0 3px rgba(29, 93, 236, 0.1);
+}
+
+.search-input-wrap {
+    min-width: 220px;
+    flex: 1;
+    max-width: 300px;
+}
+
+/* TABEL DATA */
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.cbt-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+}
+
+.cbt-data-table th {
+    background-color: #F8FAFC;
+    color: #64748B;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 11px 14px;
+    text-align: left;
+    border-bottom: 1px solid #E8EEF5;
+}
+
+.cbt-data-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #F1F5F9;
+    vertical-align: middle;
+}
+
+.action-cell {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.status-pill {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.status-pill.green { background-color: #DCFCE7; color: #15803D; }
+.status-pill.amber { background-color: #FEF3C7; color: #B45309; }
+.status-pill.red { background-color: #FFE4E6; color: #E11D48; }
+.status-pill.blue { background-color: #EEF4FF; color: #1D5DEC; }
+
+/* ==========================================================================
+   CUSTOM POPUP MODAL (FORM INPUT & DIALOG KONFIRMASI)
+   ========================================================================== */
+.cbt-modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.52);
+    backdrop-filter: blur(3px);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.cbt-modal-backdrop.show {
+    display: flex;
+    animation: fadeInModal 0.18s ease-out;
+}
+
+.cbt-modal-box {
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 18px;
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.22);
+    border: 1px solid #E2E8F0;
+    overflow: hidden;
+    animation: scaleUpModal 0.2s ease-out;
+}
+
+.cbt-modal-box.confirm-box {
+    max-width: 400px;
+    text-align: center;
+    padding: 26px 24px 22px 24px;
+}
+
+.cbt-modal-header {
+    padding: 18px 22px;
+    border-bottom: 1px solid #F1F5F9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cbt-modal-header h4 {
+    font-size: 15.5px;
+    font-weight: 800;
+    color: #0F172A;
+}
+
+.cbt-modal-close {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 800;
+    color: #64748B;
+}
+
+.cbt-modal-body {
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-field-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 6px;
+}
+
+.form-field-group .cbt-input-sm {
+    width: 100%;
+    padding: 10px 12px;
+}
+
+.password-gen-row {
+    display: flex;
+    gap: 8px;
+}
+
+.password-gen-row input {
+    flex: 1;
+}
+
+.cbt-modal-footer {
+    padding: 14px 22px;
+    background-color: #F8FAFC;
+    border-top: 1px solid #F1F5F9;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.confirm-icon-circle {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    margin: 0 auto 14px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm-icon-circle.question { background-color: #EEF4FF; color: #1D5DEC; }
+.confirm-icon-circle.danger { background-color: #FFE4E6; color: #E11D48; }
+.confirm-icon-circle.success { background-color: #DCFCE7; color: #15803D; }
+
+.confirm-title {
+    font-size: 16.5px;
+    font-weight: 800;
+    color: #0F172A;
+    margin-bottom: 6px;
+}
+
+.confirm-desc {
+    font-size: 13px;
+    color: #64748B;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.confirm-btn-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.confirm-btn-row .cbt-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 10px 16px;
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleUpModal {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* ==========================================================================
+   FIX RESPONSIVE MOBILE HP (MENCEGAH TABEL & KARTU TERPOTONG DI LAYAR KECIL)
+   ========================================================================== */
+.page-card {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.table-wrap {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.cbt-data-table {
+    min-width: 540px; /* Agar tabel bisa di-swipe horizontal di dalam kartu tanpa merusak halaman */
+}
+
+@media (max-width: 768px) {
+    .page-card {
+        padding: 16px 14px;
+        border-radius: 14px;
+    }
+
+    .page-card-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .page-card-header .cbt-btn,
+    .btn-group-row .cbt-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .table-toolbar {
+        padding: 10px;
+    }
+
+    .toolbar-left {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .search-input-wrap,
+    .toolbar-left .cbt-input-sm {
+        min-width: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+}

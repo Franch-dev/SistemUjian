@@ -1,0 +1,377 @@
+/* ==========================================================================
+   MURID/EXAM.CSS — CLEAN & CALM ENTERPRISE ASSESSMENT INTERFACE
+   Tanpa Emotikon, Kontras Nyaman di Mata, & Fokus Pengerjaan
+   ========================================================================== */
+
+body.exam-lock-body {
+    background-color: #F4F7FB;
+    color: #0F172A;
+    min-height: 100vh;
+    user-select: none;
+    -webkit-user-select: none;
+    overflow-x: hidden;
+}
+
+/* 1. CLEAN WHITE STICKY HEADER BAR */
+.exam-topbar {
+    height: 70px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.04);
+}
+
+.exam-brand-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.exam-brand-left h1 {
+    font-size: 16px;
+    font-weight: 800;
+    color: #0F172A;
+    line-height: 1.25;
+}
+
+.exam-brand-left span {
+    font-size: 12px;
+    color: #64748B;
+    font-weight: 600;
+}
+
+.exam-status-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.violation-pill {
+    background-color: #FFF1F2;
+    border: 1px solid #FECDD3;
+    color: #BE123C;
+    padding: 7px 14px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.timer-countdown-box {
+    background-color: #EEF4FF;
+    border: 1px solid #BFDBFE;
+    color: #1D4ED8;
+    padding: 8px 18px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.timer-countdown-box.urgent {
+    background-color: #FEF2F2;
+    border-color: #FCA5A5;
+    color: #DC2626;
+}
+
+/* 2. GRID UTAMA RUANG UJIAN */
+.exam-main-grid {
+    max-width: 1280px;
+    margin: 24px auto;
+    padding: 0 24px 60px 24px;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 24px;
+    align-items: start;
+}
+
+/* Kartu Lembar Pertanyaan Kiri */
+.question-sheet-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 18px;
+    padding: 28px 32px;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+}
+
+.question-top-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #F1F5F9;
+    margin-bottom: 22px;
+}
+
+.question-number-badge {
+    background-color: #EEF4FF;
+    color: #1D5DEC;
+    border: 1px solid #DBEAFE;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 12.5px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+}
+
+.autosave-indicator {
+    font-size: 12px;
+    font-weight: 600;
+    color: #059669;
+    background-color: #ECFDF5;
+    border: 1px solid #A7F3D0;
+    padding: 5px 12px;
+    border-radius: 999px;
+}
+
+.question-stem-text {
+    font-size: 16.5px;
+    font-weight: 600;
+    color: #0F172A;
+    line-height: 1.75;
+    margin-bottom: 22px;
+}
+
+.question-stem-image {
+    margin-bottom: 22px;
+}
+
+.question-stem-image img {
+    max-width: 100%;
+    max-height: 320px;
+    border-radius: 12px;
+    border: 1px solid #E2E8F0;
+}
+
+/* Opsi Jawaban A s/d E yang Bersih & Lega */
+.options-choice-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option-choice-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 15px 20px;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 14px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.16s ease;
+}
+
+.option-choice-card:hover {
+    border-color: #93C5FD;
+    background-color: #F8FAFC;
+}
+
+.option-choice-card.selected {
+    border-color: #1D5DEC;
+    background-color: #F4F8FF;
+    box-shadow: 0 0 0 3px rgba(29, 93, 236, 0.10);
+}
+
+.option-letter-circle {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    border: 1.5px solid #CBD5E1;
+    background-color: #F8FAFC;
+    color: #334155;
+    font-size: 13.5px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.16s ease;
+}
+
+.option-choice-card.selected .option-letter-circle {
+    background-color: #1D5DEC;
+    border-color: #1D5DEC;
+    color: #FFFFFF;
+}
+
+.option-content-body {
+    font-size: 14.5px;
+    color: #1E293B;
+    font-weight: 500;
+    line-height: 1.55;
+    flex: 1;
+}
+
+/* Bar Navigasi Bawah Soal */
+.question-bottom-nav {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #F1F5F9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.ragu-toggle-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    background-color: #FFFBEB;
+    border: 1px solid #FDE68A;
+    border-radius: 10px;
+    color: #B45309;
+    font-size: 12.5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* 3. PANEL KANAN: PROGRES & GRID NOMOR SOAL */
+.number-nav-panel {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+    position: sticky;
+    top: 92px;
+}
+
+.nav-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.nav-panel-header h3 {
+    font-size: 14.5px;
+    font-weight: 800;
+    color: #0F172A;
+}
+
+.nav-progress-track {
+    width: 100%;
+    height: 7px;
+    background-color: #F1F5F9;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+.nav-progress-fill {
+    height: 100%;
+    background-color: #10B981;
+    width: 0%;
+    transition: width 0.25s ease;
+}
+
+.number-grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.num-box-btn {
+    height: 42px;
+    border-radius: 10px;
+    border: 1.5px solid #E2E8F0;
+    background-color: #F8FAFC;
+    color: #475569;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.num-box-btn:hover {
+    border-color: #CBD5E1;
+}
+
+.num-box-btn.answered {
+    background-color: #10B981;
+    border-color: #059669;
+    color: #FFFFFF;
+}
+
+.num-box-btn.doubtful {
+    background-color: #F59E0B;
+    border-color: #D97706;
+    color: #FFFFFF;
+}
+
+.num-box-btn.current {
+    border-color: #1D5DEC;
+    box-shadow: 0 0 0 2.5px rgba(29, 93, 236, 0.28);
+}
+
+/* Legenda Indikator CSS Murni (Tanpa Emotikon) */
+.nav-legend-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #64748B;
+    margin-bottom: 20px;
+    padding-top: 14px;
+    border-top: 1px solid #F1F5F9;
+}
+
+.legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.legend-dot.answered { background-color: #10B981; }
+.legend-dot.doubtful { background-color: #F59E0B; }
+.legend-dot.empty { background-color: #E2E8F0; border: 1px solid #CBD5E1; }
+
+/* Overlay Pengunci Fullscreen */
+.fullscreen-blocker-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.92);
+    backdrop-filter: blur(4px);
+    z-index: 1500;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+}
+
+.fullscreen-blocker-overlay.show {
+    display: flex;
+}
+
+@media (max-width: 960px) {
+    .exam-main-grid {
+        grid-template-columns: 1fr;
+        padding: 0 16px 40px 16px;
+    }
+    .exam-topbar {
+        padding: 0 16px;
+    }
+    .violation-pill {
+        display: none;
+    }
+}

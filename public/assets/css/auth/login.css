@@ -1,0 +1,605 @@
+/* ==========================================================================
+   LOGIN PAGE CSS — SMK NEGERI 1 KOTA BEKASI (DESKTOP & MOBILE MOCKUP)
+   ========================================================================== */
+
+.login-page-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #C7DDFF 0%, #DCEBFE 50%, #CBE0FF 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px;
+}
+
+/* KARTU UTAMA DESKTOP */
+.login-main-card {
+    width: 100%;
+    max-width: 1220px;
+    background-color: var(--surface-white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* 1. TOP HEADER BAR (DESKTOP) */
+.login-top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 36px;
+    background-color: var(--surface-white);
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.brand-identity {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.school-logo-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #F0F6FF;
+    border: 1.5px solid #BFDBFE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.school-logo-circle.large {
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 12px auto;
+}
+
+.brand-text h1 {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.2;
+}
+
+.brand-text span {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--primary-blue);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.top-tagline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--text-body);
+}
+
+/* 2. GRID 2 KOLOM (KIRI HERO & KANAN FORM) */
+.login-content-grid {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    min-height: 620px;
+}
+
+/* KOLOM KIRI: HERO & ILUSTRASI */
+.login-left-hero {
+    background-color: #F4F9FF;
+    padding: 42px 44px 28px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #EEF4FC;
+}
+
+.hero-Heading-group h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.25;
+}
+
+.hero-Heading-group h3 {
+    font-size: 34px;
+    font-weight: 800;
+    color: var(--primary-blue);
+    line-height: 1.2;
+    margin-top: 2px;
+}
+
+.hero-Heading-group h4 {
+    font-size: 23px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-top: 4px;
+}
+
+.hero-description {
+    margin-top: 14px;
+    font-size: 13.5px;
+    color: var(--text-body);
+    max-width: 520px;
+    line-height: 1.6;
+}
+
+/* 4 Kartu Fitur (Aman, Mudah, Akses, Pengawasan) */
+.feature-cards-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 26px;
+}
+
+.feature-pill-card {
+    background-color: var(--surface-white);
+    border: 1px solid #E6EEF8;
+    border-radius: 14px;
+    padding: 14px 10px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+}
+
+.feature-pill-card.amber-border {
+    border-color: #FDE68A;
+    background-color: #FFFDF7;
+}
+
+.feature-icon-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    margin: 0 auto 8px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon-box.blue { background-color: #EBF3FF; color: #2563EB; }
+.feature-icon-box.mint { background-color: #E6F8F3; color: #0D9488; }
+.feature-icon-box.purple { background-color: #F3E8FF; color: #9333EA; }
+.feature-icon-box.amber { background-color: #FEF3C7; color: #D97706; }
+
+.feature-pill-card p {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.3;
+}
+
+/* ILUSTRASI BAWAH KIRI (BUKU + TABLET UJIAN + PENSIL) */
+.hero-illustration-stage {
+    margin-top: 28px;
+    padding-top: 10px;
+    border-bottom: 1px solid #E2ECF9;
+    padding-bottom: 18px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 18px;
+    position: relative;
+}
+
+/* Tumpukan 3 Buku */
+.books-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 155px;
+    flex-shrink: 0;
+}
+
+.book-item {
+    padding: 8px 14px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 11.5px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.12);
+}
+
+.book-item::after {
+    content: "";
+    width: 5px;
+    height: 14px;
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 3px;
+}
+
+.book-1 { background-color: #18367A; }
+.book-2 { background-color: #1D5DEC; margin-left: 8px; }
+.book-3 { background-color: #1373C7; }
+
+/* Tablet Simulasi Ujian */
+.mockup-tablet-frame {
+    flex: 1;
+    max-width: 270px;
+    background-color: #0F172A;
+    border-radius: 14px;
+    padding: 10px;
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.18);
+}
+
+.mockup-tablet-screen {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.tablet-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #F1F5F9;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+}
+
+.tablet-title {
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.tablet-title .dot-blue {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--primary-blue);
+}
+
+.tablet-timer {
+    font-size: 9px;
+    font-weight: 700;
+    color: #10B981;
+}
+
+.tablet-q-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.tablet-q-header strong {
+    font-size: 10px;
+    color: var(--text-dark);
+}
+
+.tablet-badge-active {
+    font-size: 8px;
+    font-weight: 700;
+    background-color: #E0F2FE;
+    color: #0284C7;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.tablet-line-skeleton {
+    height: 6px;
+    background-color: #CBD5E1;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.tablet-line-skeleton.short {
+    width: 75%;
+    background-color: #E2E8F0;
+    margin-bottom: 9px;
+}
+
+.tablet-option-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 9px;
+    color: var(--text-body);
+    margin-bottom: 4px;
+}
+
+.tablet-option-row.selected {
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+.radio-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1.5px solid #CBD5E1;
+    display: inline-block;
+}
+
+.radio-dot.checked {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.tablet-bottom-action {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 6px;
+}
+
+.tablet-next-btn {
+    background-color: var(--primary-blue);
+    color: #FFFFFF;
+    font-size: 8.5px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 4px;
+}
+
+/* Gelas Pensil Warna */
+.pencil-cup {
+    width: 34px;
+    height: 44px;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 4px 4px 8px 8px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    box-shadow: var(--shadow-soft);
+}
+
+.pencil-sticks {
+    display: flex;
+    gap: 3px;
+    margin-top: -12px;
+}
+
+.stick { width: 5px; height: 22px; border-radius: 2px; }
+.stick.green { background-color: #10B981; transform: rotate(-8deg); }
+.stick.blue { background-color: #2563EB; }
+.stick.orange { background-color: #F59E0B; transform: rotate(10deg); }
+
+.hero-footer-note {
+    padding-top: 12px;
+    font-size: 11px;
+    color: var(--text-body);
+}
+
+.hero-footer-note a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* 3. KOLOM KANAN: FORM LOGIN */
+.login-right-form-panel {
+    background-color: var(--surface-white);
+    padding: 42px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+/* Header Awan Khusus Mobile (Disembunyikan di Desktop) */
+.mobile-cloud-header,
+.mobile-welcome-banner,
+.mobile-wave-footer {
+    display: none;
+}
+
+.form-brand-center {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.form-brand-center h3 {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.form-brand-center p {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-top: 2px;
+}
+
+.welcome-back-title {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.welcome-back-title h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.welcome-back-title p {
+    font-size: 12.5px;
+    color: var(--text-body);
+    margin-top: 4px;
+}
+
+/* Input Group Sesuai Mockup */
+.input-group-field {
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.input-icon-left {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+}
+
+.cbt-input {
+    width: 100%;
+    padding: 13px 42px 13px 42px;
+    border: 1.2px solid #DCE4F0;
+    border-radius: var(--radius-md);
+    background-color: #FFFFFF;
+    font-family: inherit;
+    font-size: 13.5px;
+    color: var(--text-dark);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cbt-input::placeholder {
+    color: #94A3B8;
+}
+
+.cbt-input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(29, 93, 236, 0.10);
+}
+
+.password-toggle-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.form-actions-stack {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ==========================================================================
+   RESPONSIVE MOBILE VIEW (MAKSIMAL LEBAR 900PX — PERSIS MOCKUP HP KANAN)
+   ========================================================================== */
+@media (max-width: 900px) {
+    .login-page-wrapper {
+        padding: 0;
+        background: #E2EEFF;
+        align-items: stretch;
+    }
+
+    .login-main-card {
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+        background: linear-gradient(180deg, #CBE0FF 0%, #E8F2FF 28%, #FFFFFF 28%);
+    }
+
+    /* Sembunyikan Elemen Desktop */
+    .login-top-bar,
+    .login-left-hero,
+    .form-brand-center,
+    .welcome-back-title {
+        display: none;
+    }
+
+    .login-content-grid {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    /* Tampilkan Header Awan Mobile (Persis Gambar Kanan) */
+    .mobile-cloud-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 36px 20px 24px 20px;
+        position: relative;
+    }
+
+    .mobile-cloud-header h2 {
+        font-size: 14px;
+        font-weight: 800;
+        color: var(--text-dark);
+        margin-top: 8px;
+        letter-spacing: 0.3px;
+    }
+
+    .mobile-cloud-header p {
+        font-size: 11.5px;
+        color: var(--text-body);
+        font-weight: 500;
+    }
+
+    .login-right-form-panel {
+        background-color: var(--surface-white);
+        border-radius: 28px 28px 0 0;
+        padding: 28px 24px 32px 24px;
+        flex: 1;
+        justify-content: flex-start;
+        box-shadow: 0 -10px 30px rgba(29, 93, 236, 0.06);
+    }
+
+    /* Tampilkan Sambutan Mobile di Atas Input */
+    .mobile-welcome-banner {
+        display: block;
+        margin-bottom: 22px;
+    }
+
+    .mobile-welcome-banner span {
+        font-size: 13px;
+        color: var(--text-dark);
+        font-weight: 500;
+    }
+
+    .mobile-welcome-banner h1 {
+        font-size: 20px;
+        font-weight: 800;
+        color: var(--primary-blue);
+        line-height: 1.25;
+        margin-top: 2px;
+    }
+
+    .mobile-welcome-banner h3 {
+        font-size: 16px;
+        font-weight: 800;
+        color: var(--text-dark);
+    }
+
+    .mobile-welcome-banner p {
+        font-size: 12px;
+        color: var(--text-body);
+        margin-top: 8px;
+        line-height: 1.5;
+    }
+
+    /* Footer Gelombang Bawah Mobile */
+    .mobile-wave-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 18px;
+        background: linear-gradient(90deg, #6EA8FE 0%, #3D84F5 50%, #6EA8FE 100%);
+        color: #FFFFFF;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.4px;
+    }
+}

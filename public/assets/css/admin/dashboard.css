@@ -1,0 +1,325 @@
+/* ==========================================================================
+   ADMIN-DASHBOARD.CSS — KHUSUS HALAMAN 1: DASHBOARD UTAMA
+   Persis Gambar Mockup Desktop (1440px) & Mobile (390x844)
+   ========================================================================== */
+
+/* 1. WELCOME BANNER BIRU LEMBUT */
+.welcome-banner {
+    background-color: #F4F8FF;
+    border: 1px solid #DCEBFE;
+    border-radius: 16px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.welcome-left h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0F172A;
+}
+
+.welcome-left h2 span {
+    color: #1D5DEC;
+}
+
+.welcome-left p {
+    font-size: 12.5px;
+    color: #64748B;
+    margin-top: 3px;
+}
+
+.welcome-right {
+    text-align: right;
+}
+
+.session-running-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #DCFCE7;
+    color: #065F46;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 999px;
+}
+
+.last-updated-text {
+    display: block;
+    font-size: 11px;
+    color: #64748B;
+    margin-top: 6px;
+}
+
+/* 2. EMPAT KARTU KPI */
+.dashboard-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.dash-kpi-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E8EEF5;
+    border-radius: 16px;
+    padding: 18px 20px;
+}
+
+.kpi-icon-square {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.kpi-icon-square.blue { background-color: #EEF4FF; color: #1D5DEC; }
+.kpi-icon-square.purple { background-color: #F3E8FF; color: #7C3AED; }
+.kpi-icon-square.sky { background-color: #E0F2FE; color: #0284C7; }
+.kpi-icon-square.red { background-color: #FFE4E6; color: #E11D48; }
+
+.dash-kpi-title {
+    font-size: 12px;
+    color: #64748B;
+    font-weight: 500;
+}
+
+.dash-kpi-number {
+    font-size: 26px;
+    font-weight: 800;
+    color: #0F172A;
+    margin: 4px 0;
+}
+
+.dash-kpi-number.danger-text {
+    color: #E11D48;
+}
+
+.dash-kpi-trend {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.dash-kpi-trend.up-green { color: #10B981; }
+.dash-kpi-trend.neutral { color: #64748B; }
+.dash-kpi-trend.up-red { color: #E11D48; }
+
+/* 3. GRID BARIS TENGAH & BAWAH (KIRI 62% - KANAN 38%) */
+.dashboard-split-row {
+    display: grid;
+    grid-template-columns: 1.65fr 1fr;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.dash-box-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E8EEF5;
+    border-radius: 16px;
+    padding: 20px 22px;
+}
+
+.dash-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.dash-card-header h3 {
+    font-size: 15.5px;
+    font-weight: 800;
+    color: #0F172A;
+}
+
+.dash-card-header p {
+    font-size: 12px;
+    color: #64748B;
+    margin-top: 2px;
+}
+
+.time-filter-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.filter-pill-btn {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 11.5px;
+    font-weight: 700;
+    border: 1px solid #E2E8F0;
+    background-color: #FFFFFF;
+    color: #64748B;
+    cursor: pointer;
+    white-space: nowrap; /* Mencegah teks Hari Ini turun menjadi 2 baris */
+    transition: all 0.18s ease;
+}
+
+.filter-pill-btn.active {
+    background-color: #1D5DEC;
+    color: #FFFFFF;
+    border-color: #1D5DEC;
+}
+
+/* Donut Chart Status Peserta */
+.donut-chart-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 12px 0 18px 0;
+}
+
+.donut-legend-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.donut-legend-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12.5px;
+}
+
+.legend-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #334155;
+    font-weight: 500;
+}
+
+.dot-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.dot-indicator.green { background-color: #10B981; }
+.dot-indicator.blue { background-color: #1D5DEC; }
+.dot-indicator.amber { background-color: #F59E0B; }
+.dot-indicator.purple { background-color: #7C3AED; }
+.dot-indicator.red { background-color: #E11D48; }
+
+.legend-values {
+    display: flex;
+    gap: 14px;
+    font-weight: 700;
+}
+
+.legend-values .pct {
+    color: #94A3B8;
+    font-weight: 500;
+    width: 32px;
+    text-align: right;
+}
+
+/* Distribusi Peserta per Jurusan */
+.jurusan-progress-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.jurusan-item-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12.5px;
+    margin-bottom: 6px;
+}
+
+.jurusan-bar-track {
+    width: 100%;
+    height: 7px;
+    background-color: #F1F5F9;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.jurusan-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.jurusan-bar-fill.blue { background-color: #1D5DEC; }
+.jurusan-bar-fill.green { background-color: #10B981; }
+.jurusan-bar-fill.purple { background-color: #7C3AED; }
+.jurusan-bar-fill.amber { background-color: #F59E0B; }
+
+/* Aktivitas Terbaru */
+.activity-feed-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.activity-feed-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.activity-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.activity-left .dot-indicator {
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+.activity-left h4 {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #0F172A;
+}
+
+.activity-left p {
+    font-size: 11.5px;
+    color: #64748B;
+}
+
+.activity-time {
+    font-size: 11px;
+    color: #94A3B8;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   RESPONSIVE MOBILE 390x844 (PERSIS GAMBAR MOCKUP KANAN)
+   ========================================================================== */
+@media (max-width: 960px) {
+    .welcome-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .welcome-right {
+        text-align: left;
+    }
+
+    .dashboard-kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .dashboard-split-row {
+        grid-template-columns: 1fr;
+    }
+}

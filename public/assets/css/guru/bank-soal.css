@@ -1,0 +1,468 @@
+/* ==========================================================================
+   GURU/BANK-SOAL.CSS — DESAIN KHUSUS GOOGLE FORM BUILDER & ACCORDION SOAL
+   ========================================================================== */
+
+/* 1. DAFTAR PAKET FORMULIR (ACCORDION DI HALAMAN AWAL) */
+.gform-package-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.gform-package-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-top: 7px solid #4F46E5;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+    transition: all 0.2s ease;
+}
+
+.gform-package-card:hover {
+    box-shadow: 0 8px 24px rgba(79, 70, 229, 0.10);
+}
+
+.gform-package-header {
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+}
+
+.gform-package-header:hover {
+    background-color: #F8FAFC;
+}
+
+.gform-package-title h4 {
+    font-size: 16px;
+    font-weight: 800;
+    color: #0F172A;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gform-package-title p {
+    font-size: 12.5px;
+    color: #64748B;
+    margin-top: 6px;
+}
+
+.gform-package-body {
+    display: none;
+    padding: 20px 24px;
+    background-color: #F8FAFC;
+    border-top: 1px solid #E2E8F0;
+}
+
+.gform-package-body.open {
+    display: block;
+}
+
+.question-preview-item {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-left: 5px solid #4F46E5;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+}
+
+/* ==========================================================================
+   2. KANVAS GOOGLE FORM BUILDER (PERSIS TAMPILAN GOOGLE FORM ASLI)
+   ========================================================================== */
+.gform-canvas-bg {
+    background-color: #F0EBF8;
+    border-radius: 18px;
+    padding: 28px 20px 100px 20px;
+    min-height: 82vh;
+}
+
+.gform-workspace-container {
+    max-width: 790px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Kartu Header Judul Formulir (Garis Tebal Ungu/Biru di Atas) */
+.gform-header-card {
+    background-color: #FFFFFF;
+    border: 1px solid #DADCE0;
+    border-top: 10px solid #4F46E5;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.gform-header-top-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.gform-title-display {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1F2937;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E5E7EB;
+    margin-bottom: 10px;
+}
+
+.gform-desc-display {
+    font-size: 13.5px;
+    color: #4B5563;
+    line-height: 1.5;
+}
+
+/* Kartu Setiap Pertanyaan (Garis Aktif Biru di Sisi Kiri) */
+.gform-question-card {
+    background-color: #FFFFFF;
+    border: 1px solid #DADCE0;
+    border-left: 6px solid #2563EB;
+    border-radius: 10px;
+    padding: 14px 26px 18px 26px;
+    margin-bottom: 18px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+    position: relative;
+}
+
+/* Titik 6 Drag Handle di Tengah Atas Kartu */
+.gform-drag-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #9CA3AF;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    user-select: none;
+}
+
+/* Baris Atas Kartu: [Kotak Pertanyaan] [Ikon Gambar] [Dropdown Pilihan Ganda] */
+.gform-question-header-grid {
+    display: grid;
+    grid-template-columns: 1fr 44px 210px;
+    gap: 14px;
+    align-items: start;
+}
+
+/* Kotak Input Pertanyaan Abu-abu dengan Garis Bawah Ungu/Biru */
+.gform-q-box-wrapper {
+    background-color: #F8F9FA;
+    border-bottom: 2px solid #4F46E5;
+    border-radius: 6px 6px 0 0;
+    padding: 14px 16px 10px 16px;
+    transition: background-color 0.2s;
+}
+
+.gform-q-box-wrapper:focus-within {
+    background-color: #F1F3F4;
+    border-bottom-color: #1D5DEC;
+}
+
+.gform-q-textarea {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    color: #111827;
+    resize: vertical;
+    outline: none;
+    min-height: 36px;
+}
+
+.gform-q-textarea::placeholder {
+    color: #6B7280;
+}
+
+/* Toolbar Format B I U Link di Bawah Pertanyaan */
+.gform-format-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 4px 4px 4px;
+}
+
+.gform-fmt-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    border: none;
+    background: transparent;
+    color: #4B5563;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gform-fmt-btn:hover {
+    background-color: #F3F4F6;
+    color: #111827;
+}
+
+/* Tombol Ikon Gambar di Sebelah Kanan Pertanyaan */
+.gform-icon-upload-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    color: #5F6368;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.gform-icon-upload-btn:hover {
+    background-color: #F1F3F4;
+    color: #1D5DEC;
+}
+
+/* Kotak Pilihan Ganda di Kanan Atas */
+.gform-type-selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 14px;
+    border: 1px solid #DADCE0;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #3C4043;
+}
+
+.gform-type-selector-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Daftar Opsi Pilihan A s/d E */
+.gform-options-list {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gform-opt-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Lingkaran Radio Opsi */
+.gform-opt-radio {
+    width: 20px;
+    height: 20px;
+    accent-color: #1D5DEC;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.gform-opt-letter {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #4B5563;
+    width: 20px;
+}
+
+/* Input Teks Opsi dengan Garis Bawah saat Hover/Focus */
+.gform-opt-text-input {
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid transparent;
+    padding: 8px 4px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #1F2937;
+    background: transparent;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.gform-opt-text-input:hover {
+    border-bottom: 1px solid #DADCE0;
+}
+
+.gform-opt-text-input:focus {
+    border-bottom: 2px solid #4F46E5;
+}
+
+/* Preview Gambar Opsi */
+.gform-opt-img-box {
+    margin-left: 52px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    background-color: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+}
+
+.gform-opt-img-box img {
+    max-height: 85px;
+    border-radius: 6px;
+}
+
+/* Footer Kartu Pertanyaan (Kunci Jawaban, Bobot, Duplikat, Hapus, Wajib Diisi) */
+.gform-card-bottom-bar {
+    margin-top: 22px;
+    padding-top: 14px;
+    border-top: 1px solid #E5E7EB;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.gform-key-weight-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.gform-weight-input {
+    width: 68px;
+    padding: 6px 10px;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 13px;
+}
+
+.gform-bottom-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.gform-icon-action-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    color: #5F6368;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.gform-icon-action-btn:hover {
+    background-color: #F1F3F4;
+    color: #111827;
+}
+
+.gform-icon-action-btn.delete:hover {
+    background-color: #FEE2E2;
+    color: #DC2626;
+}
+
+.gform-divider-vert {
+    width: 1px;
+    height: 24px;
+    background-color: #DADCE0;
+    margin: 0 6px;
+}
+
+/* ==========================================================================
+   3. FLOATING TOOLBAR KANAN & STICKY BAR BAWAH
+   ========================================================================== */
+.gform-side-floating-menu {
+    position: fixed;
+    right: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #FFFFFF;
+    border: 1px solid #DADCE0;
+    border-radius: 10px;
+    padding: 8px 6px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 400;
+}
+
+.gform-side-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    color: #4B5563;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.gform-side-btn:hover {
+    background-color: #EEF4FF;
+    color: #1D5DEC;
+}
+
+.gform-bottom-save-bar {
+    position: fixed;
+    bottom: 20px;
+    left: calc(50% + 134px);
+    transform: translateX(-50%);
+    background-color: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-radius: 14px;
+    padding: 12px 22px;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.18);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 450;
+}
+
+@media (max-width: 960px) {
+    .gform-question-header-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gform-side-floating-menu {
+        display: none;
+    }
+
+    .gform-bottom-save-bar {
+        left: 50%;
+        width: 94%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

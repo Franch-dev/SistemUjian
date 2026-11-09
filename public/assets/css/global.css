@@ -1,0 +1,147 @@
+/* ==========================================================================
+   GLOBAL CSS — SISTEM UJIAN ONLINE SMK NEGERI 1 KOTA BEKASI
+   Dipakai di seluruh halaman (Login, Admin, Guru, Murid)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap');
+
+:root {
+    /* Palet Warna Utama Sesuai Mockup */
+    --bg-sky-outer: #CDE0FF;
+    --bg-sky-soft: #F3F8FF;
+    --surface-white: #FFFFFF;
+    --primary-blue: #1D5DEC;
+    --primary-blue-hover: #1549C2;
+    --primary-blue-light: #EEF4FF;
+    --navy-dark: #15347A;
+
+    /* Warna Teks & Garis Batas */
+    --text-dark: #0F172A;
+    --text-body: #475569;
+    --text-muted: #94A3B8;
+    --border-light: #E2E8F0;
+    --border-input: #CBD5E1;
+
+    /* Warna Status */
+    --success-bg: #DCFCE7;
+    --success-text: #15803D;
+    --warning-bg: #FEF3C7;
+    --warning-text: #B45309;
+    --danger-bg: #FEE2E2;
+    --danger-text: #DC2626;
+
+    /* Radius & Shadow */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --radius-xl: 26px;
+    --shadow-card: 0 24px 60px rgba(15, 36, 84, 0.10);
+    --shadow-soft: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-sky-outer);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+}
+
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Utilitas Alert / Notifikasi Global */
+.cbt-alert {
+    display: none;
+    padding: 12px 14px;
+    border-radius: var(--radius-md);
+    font-size: 12.5px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    line-height: 1.45;
+    border: 1px solid transparent;
+}
+
+.cbt-alert.show {
+    display: block;
+}
+
+.cbt-alert.alert-error {
+    background-color: var(--danger-bg);
+    color: var(--danger-text);
+    border-color: #FCA5A5;
+}
+
+.cbt-alert.alert-warning {
+    background-color: var(--warning-bg);
+    color: var(--warning-text);
+    border-color: #FCD34D;
+}
+
+.cbt-alert.alert-success {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    border-color: #86EFAC;
+}
+
+/* Tombol Standar Global */
+.btn-primary {
+    width: 100%;
+    padding: 13px 20px;
+    background-color: var(--primary-blue);
+    color: var(--surface-white);
+    border: none;
+    border-radius: var(--radius-md);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 18px rgba(29, 93, 236, 0.24);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-blue-hover);
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+}
+
+.btn-primary:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.btn-secondary-outline {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: var(--primary-blue-light);
+    color: var(--primary-blue);
+    border: 1px solid #DBEAFE;
+    border-radius: var(--radius-md);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-secondary-outline:hover {
+    background-color: #DCE8FF;
+}
